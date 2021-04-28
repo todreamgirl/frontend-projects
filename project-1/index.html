@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Moon Light Parallax Effects | Vanilla Javascript</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <section>
+        <img src="https://i.imgur.com/kuO5eNl.jpg" title="source: imgur.com" />
+        <img src="https://i.imgur.com/Yt2ywiw.png" title="source: imgur.com" />
+        <img src="https://i.imgur.com/qQA2h4m.png" title="source: imgur.com" />
+        <img src="https://i.imgur.com/paT1Puq.png" title="source: imgur.com" />
+        <h2 id="text">Moon Light</h2>
+    </section>
+    <script type="text/javascript">
+        let bg = document.getElementById("bg");
+        let moon = document.getElementById("moon");
+        let mountain = document.getElementById("mountain");
+        let road = document.getElementById("road");
+        let text = document.getElementById("text");
+
+        window.addEventListener('scroll', function () {
+            var value = window.scrollY;
+
+            bg.style.top = value * 0.5 + 'px';
+            moon.style.left = -value * 0.5 + 'px';
+            mountain.style.top = -value * 0.15 + 'px';
+            road.style.top = value * 0.15 + 'px';
+            text.style.top = value * 1 + 'px';
+        })
+    </script>
+</body>
+
+</html>

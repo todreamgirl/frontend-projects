@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>Page Scroll Effects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <span class="curve">
+            <img src="https://i.imgur.com/Mh4f9Zv.png" title="source: imgur.com" />
+        </span>
+    </section>
+    <script type="text/javascript">
+    var scroll = document.querySelector('.curve');
+    window.addEventListener('scroll', function(){
+        var value = 1 + window.scrollY/-500;
+        scroll.style.transform = `scaleY(${value})`;
+    })
+    </script>
+</body>
